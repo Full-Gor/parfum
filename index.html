@@ -904,6 +904,28 @@
         text-align: center;
         display: none;
     }
+    @media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+        display: none; /* Masquer le menu par défaut */
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+        display: flex; /* Afficher lors de l'activation */
+    }
+}
     </style>
 </head>
 <body>
@@ -1101,4 +1123,31 @@
                     </div>
                 </div>
                 
-                <div class
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Gestion du menu burger
+                        const menuToggle = document.querySelector('.menu-toggle');
+                        const navLinks = document.querySelector('.nav-links');
+                        
+                        if (menuToggle) {
+                            menuToggle.addEventListener('click', function() {
+                                navLinks.classList.toggle('active');
+                                if (navLinks.classList.contains('active')) {
+                                    navLinks.style.display = 'flex';
+                                } else {
+                                    setTimeout(function() {
+                                        navLinks.style.display = 'none';
+                                    }, 300); // Attendre la fin de l'animation
+                                }
+                            });
+                        }
+                    });
+                    document.addEventListener('DOMContentLoaded', function() {
+    // Rediriger tous les boutons "Acheter" vers la page de commande
+    const buyButtons = document.querySelectorAll('.buy-btn');
+    
+    buyButtons.forEach(button => {
+        button.href = "commander.html";
+    });
+});
+</script>
