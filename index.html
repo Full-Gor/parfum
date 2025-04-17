@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vente de parfums de luxe en gros à prix avantageux. Livraison en France et en Europe, remise en main propre sur Paris.">
+    <meta name="keywords" content="parfums en gros, vente parfum, parfum de luxe, parfum pas cher, parfum bois, parfum bakara, sauvage parfum">
+    <meta name="author" content="Parfums Premium">
+    <meta property="og:title" content="Parfums Premium - Vente en gros de parfums de luxe">
+    <meta property="og:description" content="Large gamme de parfums de luxe en gros à prix avantageux. Livraison en France et en Europe.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://parfumspremium.com">
+    <title>Parfums Premium - Vente en gros de parfums de luxe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #212121;
+            --secondary-color: #bf9b30;
+            --accent-color: #f8f3e3;
+            --text-color: #333333;
+            --light-color: #ffffff;
+            --gray-color: #f5f5f5;
+            --dark-gray: #777;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--light-color);
+            background: transparent;
+            border: none;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1595425964072-459ecbbfc631?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--light-color);
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--light-color);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--secondary-color);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: var(--gray-color);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 100px 0;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .product-card {
+            background: var(--light-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-card .product-img {
+            height: 200px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            max-width: 60%;
+            max-height: 80%;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .buy-btn {
+            width: 100%;
+            padding: 10px;
+            background: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .buy-btn:hover {
+            background: var(--secondary-color);
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: var(--gray-color);
+        }
+        
+        .pricing-table {
+            max-width: 800px;
+            margin: 50px auto 0;
+            background: var(--light-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .pricing-header {
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .pricing-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-body {
+            padding: 40px;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-row:last-child {
+            border-bottom: none;
+        }
+        
+        .quantity {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .price {
+            color: var(--secondary-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary-color);
+            color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-text h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .contact-text p, .contact-text a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-text a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .contact-whatsapp {
+            display: inline-block;
+            background: #25D366;
+            color: var(--light-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 250px;
+            transition: var(--transition);
+        }
+        
+        .contact-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-5px);
+        }
+        
+        .contact-whatsapp i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-map {
+            flex: 1;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--light-color);
+        }
+        
+        .footer-logo span {
+            color: var(--secondary-color);
+        }
+        
+        .footer-text {
+            margin-bottom: 30px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin: 0 15px;
+        }
+        
+        .footer-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .copyright {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 30px;
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary-color);
+            color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 100;
+        }
+        
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover {
+            background: var(--primary-color);
+        }
+        
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background: var(--light-color);
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            padding: 40px;
+            position: relative;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transform: translateY(50px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .modal.active .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-gray);
+            transition: var(--transition);
+        }
+        
+        .modal-close:hover {
+            color: var(--primary-color);
+        }
+        
+        .modal h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .modal p {
+            margin-bottom: 30px;
+            color: var(--dark-gray);
+        }
+        
+        .modal-btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--light-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .modal-btn:hover {
+            background: var(--primary-color);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .contact-map {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: var(--primary-color);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .about-text h3 {
+                font-size: 1.5rem;
+            }
+            
+            .pricing-body {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .about-text h3, .contact-info h3, .modal h3 {
+                font-size: 1.5rem;
+            }
+            
+            .product-img {
+                height: 180px;
+            }
+            
+            .product-info h3 {
+                font-size: 1.2rem;
+            }
+            
+            .scroll-top {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Parfums <span>Premium</span></a>
+                <button class="menu-toggle">☰</button>
+                <ul class="nav-links">
+                    <li><a href="#hero">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#products">Parfums</a></li>
+                    <li><a href="#pricing">Tarifs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Parfums de luxe en gros à prix imbattables</h1>
+                <p>Découvrez notre collection de parfums inspirés des plus grandes marques à des prix avantageux pour les professionnels et revendeurs.</p>
+                <a href="#products" class="btn">Découvrir nos parfums</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>À propos de nous</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Une expérience olfactive exceptionnelle</h3>
+                    <p>Parfums Premium est spécialisé dans la vente en gros de parfums de haute qualité inspirés des plus grandes marques. Nos produits sont fabriqués avec des ingrédients soigneusement sélectionnés pour offrir une expérience olfactive exceptionnelle.</p>
+                    <p>Nous proposons une large gamme de parfums pour hommes et femmes à des prix très compétitifs, parfaits pour les professionnels, revendeurs et détaillants souhaitant maximiser leurs marges.</p>
+                    <p>Notre objectif est de rendre le luxe accessible à tous en offrant des parfums d'excellente qualité à des prix abordables. Nous livrons dans toute la France et en Europe, et proposons également une remise en main propre sur Paris.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1596742578443-7682ef7b7057?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Collection de parfums">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Parfums</h2>
+            </div>
+            <div class="products-grid">
+                <!-- Parfum 1 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Bois">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bois</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <!-- Parfum 2 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Bakara">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bakara</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <!-- Parfum 3 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Aisha">
+                    </div>
+                    <div class="product-info">
+                        <h3>Aisha</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <!-- Parfum 4 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Mula">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mula</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <!-- Parfum 5 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Sauvage">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sauvage</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <!-- Parfum 6 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Kirke">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kirke</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <!-- Parfum 7 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Sucre Rose">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sucre Rose</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <!-- Parfum 8 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Sucre Noir">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sucre Noir</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <!-- Plus de parfums -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Yara">
+                    </div>
+                    <div class="product-info">
+                        <h3>Yara</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Bleu">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bleu</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Coco">
+                    </div>
+                    <div class="product-info">
+                        <h3>Coco</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Coco Vanille">
+                    </div>
+                    <div class="product-info">
+                        <h3>Coco Vanille</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/400/320" alt="Parfum Attrape Rêve">
+                    </div>
+                    <div class="product-info">
+                        <h3>Attrape Rêve</h3>
+                        <a href="tel:+33615951564" class="buy-btn">Acheter</a>
+                    </div>
+                </div>
+                
+                <div class
